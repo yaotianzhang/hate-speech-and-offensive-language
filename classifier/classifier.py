@@ -254,8 +254,8 @@ if __name__ == '__main__':
 
     print ("Printing predicted values: ")
     for i,t in enumerate(trump_tweets):
-        print t
-        print class_to_name(trump_predictions[i])
+        print (t)
+        print (class_to_name(trump_predictions[i]))
 
     print ("Calculate accuracy on labeled data")
     df = pd.read_csv('../data/labeled_data.csv')
