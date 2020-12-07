@@ -219,7 +219,8 @@ def get_tweets_predictions(tweets, perform_prints=True):
             fixed_tweets.append(s)
     assert len(tweets) == len(fixed_tweets), "shouldn't remove any tweets"
     tweets = fixed_tweets
-    print len(tweets), (" tweets to classify")
+    len(tweets)
+    print(" tweets to classify")
 
     print ("Loading trained classifier... ")
     model = joblib.load('final_model.pkl')
