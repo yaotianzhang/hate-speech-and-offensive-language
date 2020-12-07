@@ -167,7 +167,7 @@ def transform_inputs(tweets, tf_vectorizer, idf_vector, pos_vectorizer):
     """
     tf_array = tf_vectorizer.fit_transform(tweets).toarray()
     tfidf_array = tf_array*idf_vector
-    print ("Built TF-IDF array"）
+    print ("Built TF-IDF array")
 
     pos_tags = get_pos_tags(tweets)
     pos_array = pos_vectorizer.fit_transform(pos_tags).toarray()
@@ -219,7 +219,7 @@ def get_tweets_predictions(tweets, perform_prints=True):
             fixed_tweets.append(s)
     assert len(tweets) == len(fixed_tweets), "shouldn't remove any tweets"
     tweets = fixed_tweets
-    print len(tweets), " tweets to classify"
+    print len(tweets), (" tweets to classify")
 
     print ("Loading trained classifier... ")
     model = joblib.load('final_model.pkl')
@@ -268,4 +268,4 @@ if __name__ == '__main__':
             right_count += 1
 
     accuracy = right_count / float(len(df))
-    print "accuracy", accuracy
+    print ("accuracy"), accuracy
